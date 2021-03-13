@@ -7,10 +7,12 @@
       <avatar />
       <div class="text-sm-center mb-4 mt-3">
         <h1>
-          Amirreza <span class="light-blue--text text--lighten-3">Nasiri</span>
+          <!--      TODO get user data from the server if there are none, specify the default -->
+          Default User <span class="light-blue--text text--lighten-3">Name</span>
         </h1>
         <span>
-          A challenge-loving web developer
+          <!--      TODO get user data from the server if there are none, specify the default -->
+          Default profession
         </span>
       </div>
 

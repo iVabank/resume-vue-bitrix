@@ -9,7 +9,6 @@
           fluid
           fill-height
         >
-          <github-ribbon />
           <v-layout
             align-center
             justify-center
@@ -50,12 +49,10 @@ import ContentContainer from '@/views/dark-template/content/Container'
 import TimelinePrimary from '@/views/dark-template/timeline/Primary'
 import TimelineEndless from '@/views/dark-template/timeline/Endless'
 import LeaderLine from 'leader-line'
-import GithubRibbon from '@/views/dark-template/GithubRibbon'
 
 export default {
   name      : 'DarkTemplateContainer',
   components: {
-    GithubRibbon,
     TimelineEndless,
     TimelinePrimary,
     ContentContainer,
