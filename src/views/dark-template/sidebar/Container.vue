@@ -81,22 +81,22 @@ export default {
             {
               name: 'Email',
               icon: 'mdi-email',
-              text: 'hi@amirreza.in',
+              text: '',
             },
             {
               name: 'Website',
               icon: 'mdi-web',
-              text: 'amirreza.in',
+              text: '',
             },
             {
               name: 'Birth Date',
               icon: 'mdi-cake-variant',
-              text: 'Dec 7, 1996',
+              text: '',
             },
             {
               name: 'Habitation',
               icon: 'mdi-map-marker',
-              text: 'Tabriz, Iran',
+              text: '',
             },
           ],
         },
@@ -105,54 +105,29 @@ export default {
           items: [
             {
               icon: 'mdi-github-circle',
-              text: 'github.com/AmirrezaNasiri',
-              link: 'https://github.com/AmirrezaNasiri',
+              text: '',
+              link: '',
             },
             {
               icon: 'mdi-linkedin-box',
-              text: 'linkedin.com/in/amirreza-nasiri',
-              link: 'https://linkedin.com/in/amirreza-nasiri',
+              text: '',
+              link: '',
             },
             {
               icon: 'mdi-twitter',
-              text: 'twitter.com/Amirreza_Nasiri',
-              link: 'https://twitter.com/Amirreza_Nasiri',
+              text: '',
+              link: '',
             },
             {
               icon: 'mdi-instagram',
-              text: 'instagram.com/amirreza.n96',
-              link: 'https://instagram.com/amirreza.n96',
+              text: '',
+              link: '',
             },
           ],
         },
         hobbies: {
           title: 'HOBBIES',
           items: [
-
-            {
-              icon: 'mdi-bullseye',
-              text: 'Getting out of Safe Zone',
-            },
-            {
-              icon: 'mdi-biohazard',
-              text: 'Challenges',
-            },
-            {
-              icon: 'mdi-bike',
-              text: 'Cycling',
-            },
-            {
-              icon: 'mdi-image-filter-hdr',
-              text: 'Nature',
-            },
-            {
-              icon: 'mdi-auto-fix',
-              text: 'Hacking Stuffs',
-            },
-            {
-              icon: 'mdi-teach',
-              text: 'Teaching',
-            },
             {
               icon: 'mdi-karate',
               text: 'Sports',
@@ -162,16 +137,8 @@ export default {
               text: 'Music',
             },
             {
-              icon: 'mdi-account-group',
-              text: 'Leadership',
-            },
-            {
               icon: 'mdi-book-open-page-variant',
               text: 'Books',
-            },
-            {
-              icon: 'mdi-android-debug-bridge',
-              text: 'Tickling Bugs!',
             },
           ],
         },
@@ -180,18 +147,6 @@ export default {
           items: [
             {
               text : 'English',
-              value: 70,
-            },
-            {
-              text : 'Turkish',
-              value: 45,
-            },
-            {
-              text : 'Azeri',
-              value: 100,
-            },
-            {
-              text : 'Persian',
               value: 100,
             },
           ],
