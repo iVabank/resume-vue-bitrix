@@ -19,3 +19,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# local composer files
+public/local/composer.phar
+public/local/vendor/*
+public/local/composer.json

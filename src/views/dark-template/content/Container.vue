@@ -6,10 +6,7 @@
     <v-card-text>
       <content-section
         title="Who am I?"
-      >
-        I'm a developer born in Iran and founder of <a href="http://delix.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=delix">Delix.ir</a>, <a href="https://bytegate.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=bytegate">Bytegate.ir</a> and <a href="http://bobet.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=bobet">Bobet.ir</a> and co-founder of <a href="https://smo.li/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=smoli">Smo.li</a>.<br>
-        I'm interested and skilled in different topics of Information Technology including programming, web development, and computer and network security.
-      </content-section>
+      />
       <content-section
         v-if="prouds"
         title="What am I proud of?"
@@ -118,33 +115,18 @@ export default {
   data      : () => ({
     prouds: [
       {
-        icon  : 'mdi-help-rhombus-outline',
-        text  : 'Answered 10M+ questions!',
-        source: '(Bytegate.ir post views)',
-      },
-      {
-        icon  : 'mdi-library-music',
-        text  : 'Made people enjoy and learn a new language for equivalent of 29+ years (older than myself!)',
-        source: '(Bobet.ir and its channel downloads)',
-      },
-      {
-        icon  : 'mdi-timer-sand',
-        text  : 'Saved +110 days of time of students, writers and etc!',
-        source: '(Delix.ir service usages)',
-      },
-      {
-        icon  : 'mdi-account-multiple',
-        text  : 'Tried to cover small part of 7 people expenses.',
-        source: '(My awesome colleagues)',
+        icon  : '',
+        text  : '',
+        source: '',
       },
     ],
     educations: [
       {
-        from       : '2015',
-        to         : '2019 (not finished yet)',
-        title      : 'Bachelor\'s degree, Information Technology',
-        location   : 'Seraj University',
-        description: 'Became a member of University Academic Association of Computer Science',
+        from       : '',
+        to         : '',
+        title      : '',
+        location   : '',
+        description: '',
       },
     ],
     skills: [
@@ -157,11 +139,6 @@ export default {
         title: 'JavaScript',
         icon : 'mdi-language-javascript',
         value: 80,
-      },
-      {
-        title: 'Laravel Framework',
-        icon : 'mdi-laravel',
-        value: 90,
       },
       {
         title: 'Vue.js Framework',
@@ -180,46 +157,9 @@ export default {
         value: 47,
       },
       {
-        title: 'Web Application Security',
-        icon : 'mdi-shield-lock',
-        value: 80,
-      },
-      {
-        title: 'Test Driven Development',
-        icon : 'mdi-test-tube',
-        value: 26,
-      },
-      {
-        title: 'Continuous Integration / Continuous Delivery',
-        icon : 'mdi-truck-fast',
-        value: 35,
-      },
-      {
         title: 'Git',
         icon : 'mdi-git',
         value: 67,
-      },
-      { divider: true },
-      {
-        title: 'Hardware Development',
-        icon : 'mdi-chip',
-        value: 29,
-      },
-      {
-        title: 'C/C++',
-        icon : 'mdi-language-cpp',
-        value: 38,
-      },
-      { divider: true },
-      {
-        title: 'Leadership',
-        icon : 'mdi-account-group',
-        value: 68,
-      },
-      {
-        title: 'Content Marketing (+340 articles)',
-        icon : 'mdi-text',
-        value: 96,
       },
     ],
   }),
