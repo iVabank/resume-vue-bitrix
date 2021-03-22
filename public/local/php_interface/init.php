@@ -1,4 +1,18 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<? use Vabank\API\UsersExt;
+
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+define("DEFAULT_USER_ID", 1);
+// Sections
+define("DEFAULT_SECTIONS_IBLOCK_ID", 2);
+// Skills
+define("DEFAULT_SKILLS_IBLOCK_ID", 7);
+// Education
+define("DEFAULT_EDUCATION_IBLOCK_ID", 6);
+// Products
+define("DEFAULT_PRODUCTS_IBLOCK_ID", 5);
+// About
+define("DEFAULT_ABOUT_IBLOCK_ID", 4);
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/local/vendor/autoload.php");
 
@@ -12,9 +26,10 @@ function pre($ar, $exit = false)
         exit();
     }
 }
+
 function pre_admin($ar, $exit = false)
 {
-    if (Vabank\UsersExt::userInGroup([1])) {
+    if (UsersExt::userInGroup([1])) {
         echo "<pre>";
         print_r($ar);
         echo "</pre>";
@@ -23,9 +38,10 @@ function pre_admin($ar, $exit = false)
         }
     }
 }
+
 function pre_dump($ar, $exit = false)
 {
-    if (Vabank\UsersExt::userInGroup([1])) {
+    if (UsersExt::userInGroup([1])) {
         echo "<pre>";
         var_dump($ar);
         echo "</pre>";

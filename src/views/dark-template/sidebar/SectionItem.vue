@@ -16,20 +16,30 @@
         {{ item.name }}
       </div>
       <p>
-        <a
-          v-if="item.link"
-          class="grey--text"
-          :href="item.link"
-          target="_blank"
-        >
-          {{ item.text }}
-        </a>
-        <span
-          v-else
-          class="grey--text"
-        >
-          {{ item.text }}
-        </span>
+        <template v-if="item.link">
+          <template v-if="item.name == 'Email'">
+            <a
+              class="grey--text"
+              :href="'mailto:'+item.link"
+            >
+              {{ item.text }}
+            </a>
+          </template>
+          <template v-else>
+            <a
+              class="grey--text"
+              :href="item.link"
+              target="_blank"
+            >
+              {{ item.text }}
+            </a>
+          </template>
+        </template>
+        <template v-else>
+          <span class="grey--text">
+            {{ item.text }}
+          </span>
+        </template>
       </p>
     </v-flex>
   </v-layout>
