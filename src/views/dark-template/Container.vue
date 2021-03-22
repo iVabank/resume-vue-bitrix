@@ -21,12 +21,18 @@
                 <v-flex
                   md4
                 >
-                  <sidebar-container class="fill-height" />
+                  <sidebar-container
+                    :prop-resume-sections="resumeSections"
+                    class="fill-height"
+                  />
                 </v-flex>
                 <v-flex
                   md8
                 >
-                  <content-container class="fill-height" />
+                  <content-container
+                    :prop-resume-sections="resumeSections"
+                    class="fill-height"
+                  />
                 </v-flex>
               </v-layout>
               <v-layout>
@@ -47,28 +53,32 @@
 import SidebarContainer from '@/views/dark-template/sidebar/Container'
 import ContentContainer from '@/views/dark-template/content/Container'
 import TimelinePrimary from '@/views/dark-template/timeline/Primary'
-import TimelineEndless from '@/views/dark-template/timeline/Endless'
-import LeaderLine from 'leader-line'
 
 export default {
   name      : 'DarkTemplateContainer',
   components: {
-    TimelineEndless,
     TimelinePrimary,
     ContentContainer,
     SidebarContainer,
   },
+  data () {
+    return { resumeSections: { } }
+  },
   mounted () {
-    // eslint-disable-next-line no-unused-vars
-    const line = new LeaderLine(
-      document.getElementById('to-timeline'),
-      document.getElementById('timeline'),
-      {
-        size      : 2,
-        color     : this.$vuetify.theme.primary,
-        startLabel: LeaderLine.captionLabel('To the Journey ...'),
-      }
-    )
+    this.fetchSectionsData()
+  },
+  methods: {
+    fetchSectionsData () {
+      this.axios.get('/api/data.php')
+        .then((response) => {
+          if (response.data.sections)
+            this.resumeSections = response.data
+        })
+      // eslint-disable-next-line unicorn/catch-error-name
+        .catch((e) => {
+          console.log(e)
+        })
+    },
   },
 }
 </script>

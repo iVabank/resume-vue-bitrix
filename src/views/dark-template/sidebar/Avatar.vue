@@ -4,17 +4,20 @@
       color="grey lighten-4"
       size="120"
     >
-      <!--      TODO get user data from the server if there are none, specify the default -->
       <img
-        :src="publicPath('/img/avatar-default.png')"
-        alt="Default User Name"
+        :src="options.pathPersonalPhoto"
+        :alt="options.name+' '+options.secondName+' '+options.lastName"
+        :title="options.name+' '+options.secondName+' '+options.lastName"
       >
     </v-avatar>
   </div>
 </template>
 
 <script>
-export default { name: 'Avatar' }
+export default {
+  name : 'Avatar',
+  props: { options: { type: Object, default: () => {} } },
+}
 </script>
 
 <style scoped>

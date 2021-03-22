@@ -4,15 +4,28 @@
     light
   >
     <v-card-text>
+      <template v-if="propResumeSections.about">
+        <content-section
+          v-for="(about, i) in propResumeSections.about"
+          :key="i"
+          :title="about.title"
+        >
+          <v-layout>
+            <v-flex md12>
+              <div
+                v-if="about.text"
+                v-html="about.text"
+              />
+            </v-flex>
+          </v-layout>
+        </content-section>
+      </template>
       <content-section
-        title="Who am I?"
-      />
-      <content-section
-        v-if="prouds"
-        title="What am I proud of?"
+        v-if="propResumeSections.products"
+        :title="propResumeSections.products.title"
       >
         <v-layout
-          v-for="(proud, i) in prouds"
+          v-for="(product, i) in propResumeSections.products.items"
           :key="i"
         >
           <v-flex
@@ -20,7 +33,7 @@
             xs3
           >
             <v-icon right>
-              {{ proud.icon }}
+              {{ product.icon }}
             </v-icon>
           </v-flex>
           <v-flex
@@ -28,45 +41,60 @@
             xs9
           >
             <p>
-              <strong>{{ proud.text }}</strong><br>
-              <small>{{ proud.source }}</small>
+              <strong>{{ product.name }}</strong><br>
+              <small v-html="product.text" /><br>
+              <small>
+                <template v-if="product.link">
+                  <a
+                    class="grey--text"
+                    :href="product.link"
+                    target="_blank"
+                  >
+                    {{ product.source }}
+                  </a>
+                </template>
+                <template v-else>
+                  <span class="grey--text">
+                    {{ product.source }}
+                  </span>
+                </template>
+              </small>
             </p>
           </v-flex>
         </v-layout>
       </content-section>
       <content-section
-        v-if="educations"
-        title="Education"
+        v-if="propResumeSections.education"
+        :title="propResumeSections.education.title"
       >
         <v-layout
-          v-for="(education, i) in educations"
+          v-for="(education, i) in propResumeSections.education.items"
           :key="i"
         >
-          <v-flex md4>
-            {{ education.from }} - {{ education.to }}
+          <v-flex md3>
+            {{ education.years }}
           </v-flex>
-          <v-flex md8>
-            <strong v-if="education.title">{{ education.title }}</strong>
-            <div v-if="education.location">
+          <v-flex md9>
+            <strong>{{ education.name }}</strong>
+            <div>
               <i>{{ education.location }}</i>
             </div>
-            <div v-if="education.description">
-              {{ education.description }}
+            <div>
+              {{ education.text }}
             </div>
           </v-flex>
         </v-layout>
       </content-section>
       <content-section
-        v-if="skills"
-        id="to-timeline"
-        title="Skills"
+        v-if="propResumeSections.skills"
+        :title="propResumeSections.skills.title"
       >
         <template slot="actions">
           (% are relative not absolute)
         </template>
         <v-layout wrap>
           <template
-            v-for="(skill, i) in skills"
+            v-for="(skill, i) in propResumeSections.skills.items"
           >
             <v-flex
               v-if="skill.divider"
@@ -90,7 +118,7 @@
                   >
                     {{ skill.icon }}
                   </v-icon>
-                  {{ skill.title }}
+                  {{ skill.name }}
                 </div>
                 <v-progress-linear
                   class="progress"
@@ -112,57 +140,7 @@ import ContentSection from '@/views/dark-template/content/Section'
 export default {
   name      : 'MainContent',
   components: { ContentSection },
-  data      : () => ({
-    prouds: [
-      {
-        icon  : '',
-        text  : '',
-        source: '',
-      },
-    ],
-    educations: [
-      {
-        from       : '',
-        to         : '',
-        title      : '',
-        location   : '',
-        description: '',
-      },
-    ],
-    skills: [
-      {
-        title: 'PHP',
-        icon : 'mdi-language-php',
-        value: 95,
-      },
-      {
-        title: 'JavaScript',
-        icon : 'mdi-language-javascript',
-        value: 80,
-      },
-      {
-        title: 'Vue.js Framework',
-        icon : 'mdi-vuejs',
-        value: 90,
-      },
-      { divider: true },
-      {
-        title: 'Ubuntu Server',
-        icon : 'mdi-ubuntu',
-        value: 70,
-      },
-      {
-        title: 'CentOS Server',
-        icon : 'mdi-linux',
-        value: 47,
-      },
-      {
-        title: 'Git',
-        icon : 'mdi-git',
-        value: 67,
-      },
-    ],
-  }),
+  props     : { propResumeSections: { type: Object, default: () => {} } },
 }
 </script>
 
