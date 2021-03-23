@@ -38,7 +38,6 @@
               <v-layout>
                 <v-flex md12>
                   <timeline-primary />
-                  <timeline-endless />
                 </v-flex>
               </v-layout>
             </v-flex>
