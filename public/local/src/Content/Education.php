@@ -21,7 +21,7 @@ class Education
             ]
         );
         if (!empty($result)) {
-            $prop_search = ['name', 'detail_text', 'years'];
+            $prop_search = ['name', 'detail_text', 'years', 'location'];
             $arEducation = API\IB::propClear($prop_search, $result);
         }
         $arEducation["title"] = \CIBlock::GetByID(DEFAULT_EDUCATION_IBLOCK_ID)->Fetch()['NAME'];

@@ -71,17 +71,20 @@
           v-for="(education, i) in propResumeSections.education.items"
           :key="i"
         >
-          <v-flex md3>
-            {{ education.years }}
+          <v-flex
+            md3
+            pr-2
+          >
+            <div class="no-wrap">
+              {{ education.years }}
+            </div>
           </v-flex>
           <v-flex md9>
-            <strong>{{ education.name }}</strong>
-            <div>
+            <strong v-html="education.name" /><br>
+            <small>
               <i>{{ education.location }}</i>
-            </div>
-            <div>
-              {{ education.text }}
-            </div>
+            </small>
+            <div v-html="education.text" />
           </v-flex>
         </v-layout>
       </content-section>

@@ -13,6 +13,8 @@ define("DEFAULT_EDUCATION_IBLOCK_ID", 6);
 define("DEFAULT_PRODUCTS_IBLOCK_ID", 5);
 // About
 define("DEFAULT_ABOUT_IBLOCK_ID", 4);
+// My life
+define("DEFAULT_LIFE_IBLOCK_ID", 8);
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/local/vendor/autoload.php");
 

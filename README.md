@@ -20,3 +20,5 @@ Code is licensed under the [MIT License](LICENSE).
 
 Forked from https://github.com/evryn/vue-modern-resume
 
+Copyright (c) 2019 Amirreza Nasiri
+
