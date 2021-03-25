@@ -1,5 +1,6 @@
 <template>
   <v-card
+    v-if="propResumeSections.about"
     color="grey lighten-4"
     light
   >
