@@ -37,7 +37,9 @@
               </v-layout>
               <v-layout>
                 <v-flex md12>
-                  <timeline-primary />
+                  <timeline-primary
+                    :prop-life="viewLife"
+                  />
                 </v-flex>
               </v-layout>
             </v-flex>
@@ -61,7 +63,10 @@ export default {
     SidebarContainer,
   },
   data () {
-    return { resumeSections: { } }
+    return {
+      resumeSections: { },
+      viewLife      : false,
+    }
   },
   mounted () {
     this.fetchSectionsData()
@@ -72,6 +77,7 @@ export default {
         .then((response) => {
           if (response.data.sections)
             this.resumeSections = response.data
+          this.viewLife = true
         })
       // eslint-disable-next-line unicorn/catch-error-name
         .catch((e) => {
