@@ -38,6 +38,9 @@ class User
                 }
             }
         }
+        if (empty($arUser["pathPersonalPhoto"])) {
+            $arUser["pathPersonalPhoto"] = "/img/avatar-default.png";
+        }
         return $arUser;
     }
 }
