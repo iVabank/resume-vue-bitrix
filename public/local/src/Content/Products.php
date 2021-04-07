@@ -19,7 +19,8 @@ class Products
                 "PROPERTY_SOURCE",
             ],
             [
-                "IBLOCK_ID" => DEFAULT_PRODUCTS_IBLOCK_ID
+                "IBLOCK_ID" => DEFAULT_PRODUCTS_IBLOCK_ID,
+                "ACTIVE" => "Y",
             ]
         );
         if (!empty($result)) {

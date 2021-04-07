@@ -17,7 +17,8 @@ class Education
                 "PROPERTY_LOCATION",
             ],
             [
-                "IBLOCK_ID" => DEFAULT_EDUCATION_IBLOCK_ID
+                "IBLOCK_ID" => DEFAULT_EDUCATION_IBLOCK_ID,
+                "ACTIVE" => "Y",
             ]
         );
         if (!empty($result)) {

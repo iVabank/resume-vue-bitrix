@@ -75,23 +75,24 @@
               <template v-if="item.photos">
                 <v-layout>
                   <v-flex md12>
-                    <CoolLightBox
-                      :items="gallerySelect"
-                      :index="index"
-                      @close="index = null"
-                    />
-                    <v-avatar
-                      v-for="(photo, i) in item.photos"
-                      :key="i"
-                      rounded
-                      class="ma-3"
-                      size="125"
-                      style="cursor: pointer;"
-                      tile
-                      @click="selectGallery(photo.gallery_key, i)"
-                    >
-                      <v-img :src="photo.thumb" />
-                    </v-avatar>
+                    <!--                    <CoolLightBox-->
+                    <!--                      :items="gallerySelect"-->
+                    <!--                      :index="index"-->
+                    <!--                      @close="index = null"-->
+                    <!--                    />-->
+                    <!--                    <v-avatar-->
+                    <!--                      v-for="(photo, i) in item.photos"-->
+                    <!--                      :key="i"-->
+                    <!--                      rounded-->
+                    <!--                      class="ma-3"-->
+                    <!--                      size="125"-->
+                    <!--                      style="cursor: pointer;"-->
+                    <!--                      tile-->
+                    <!--                      @click="selectGallery(photo.gallery_key, i)"-->
+                    <!--                    >-->
+                    <!--                      <v-img :src="photo.thumb" />-->
+                    <!--                    </v-avatar>-->
+                    <vue-picture-swipe :items="item.photos" />
                   </v-flex>
                 </v-layout>
               </template>
