@@ -15,7 +15,8 @@ class About
                 "DETAIL_TEXT",
             ],
             [
-                "IBLOCK_ID" => DEFAULT_ABOUT_IBLOCK_ID
+                "IBLOCK_ID" => DEFAULT_ABOUT_IBLOCK_ID,
+                "ACTIVE" => "Y",
             ]
         );
         if (!empty($result)) {

@@ -19,7 +19,8 @@ class Sections
                 "PROPERTY_TEXT",
             ],
             [
-                "IBLOCK_ID" => DEFAULT_SECTIONS_IBLOCK_ID
+                "IBLOCK_ID" => DEFAULT_SECTIONS_IBLOCK_ID,
+                "ACTIVE" => "Y",
             ]
         );
         if (!empty($result)) {

@@ -6,8 +6,10 @@ import '@/components'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import InfiniteLoading from 'vue-infinite-loading'
-import CoolLightBox from 'vue-cool-lightbox'
-import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+// import CoolLightBox from 'vue-cool-lightbox'
+// import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+import VuePictureSwipe from 'vue-picture-swipe'
+import 'photoswipe/dist/default-skin/default-skin.css'
 
 Vue.config.productionTip = false
 Vue.use(helper)
@@ -26,6 +28,7 @@ Vue.use(InfiniteLoading, {
     noResults: 'No more data',
   },
 })
-Vue.use(CoolLightBox)
+// Vue.use(CoolLightBox)
+Vue.component('vue-picture-swipe', VuePictureSwipe)
 
 new Vue({ render: (h) => h(App) }).$mount('#app')

@@ -17,7 +17,8 @@ class Skills
                 "PROPERTY_GROUP",
             ],
             [
-                "IBLOCK_ID" => DEFAULT_SKILLS_IBLOCK_ID
+                "IBLOCK_ID" => DEFAULT_SKILLS_IBLOCK_ID,
+                "ACTIVE" => "Y",
             ],
             [
                 "PROPERTY_GROUP" => "ASC", "SORT" => "ASC",

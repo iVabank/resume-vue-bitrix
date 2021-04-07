@@ -23,7 +23,8 @@ class Life
             ],
             [
                 "IBLOCK_ID" => DEFAULT_LIFE_IBLOCK_ID,
-                "!PROPERTY_MAIN" => $type
+                "!PROPERTY_MAIN" => $type,
+                "ACTIVE" => "Y",
             ],
             [
                 'SORT' => 'DESC', 'ID' => 'DESC'
@@ -68,9 +69,12 @@ class Life
                                     );
                                 }
                                 $arLife["items"][$i]["photos"][] = [
-                                    "thumb" => $arFileTmp["src"],
+                                    "thumbnail" => $arFileTmp["src"],
                                     "src" => $imageFile["SRC"],
-                                    "gallery_key" => intval($page - 1),
+                                    "w" => $imageFile["WIDTH"],
+                                    "h" => $imageFile["HEIGHT"],
+//                                    "thumb" => $arFileTmp["src"], // only for the CoolLightBox gallery module
+//                                    "gallery_key" => intval($page - 1), // only for the CoolLightBox gallery module
                                 ];
                             }
                         } else {
