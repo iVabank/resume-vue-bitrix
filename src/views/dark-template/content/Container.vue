@@ -85,7 +85,7 @@
             <small>
               <i>{{ education.location }}</i>
             </small>
-            <div v-html="education.text" />
+            <div v-html="education.text" /><br>
           </v-flex>
         </v-layout>
       </content-section>
