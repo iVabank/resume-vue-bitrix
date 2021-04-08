@@ -37,6 +37,9 @@ class User
                     $arUser["pathPersonalPhoto"] = $v;
                 }
             }
+            if (empty($arUser["pathPersonalPhoto"])) {
+                $arUser["pathPersonalPhoto"] = DEFAULT_AVATAR_USER;
+            }
         }
         if (empty($arUser["pathPersonalPhoto"])) {
             $arUser["pathPersonalPhoto"] = "/img/avatar-default.png";
